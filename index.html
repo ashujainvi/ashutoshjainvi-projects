@@ -1,0 +1,78 @@
+<!DOCTYPE HTML>
+<html>
+	<head>
+		<title>Ashutosh Jainvi | Projects</title>
+		<meta name="viewport" content="width=device-width, initial-scale=1 , maximum-scale=1, user-scalable=0">
+		<meta name="description" content="Online portfoilio of Ashutosh Jainvi showcasing all the work." />
+        <meta name="keywords" content="Portfolio, Ashutosh Jainvi, ashutoshjainvi, Ashutosh, Jainvi, resume, engineer, design, UX, UI, graphics, posters, flat design, front end, AngularJS, Javascript, Python" />
+        <meta name="author" content="Ashutosh Jainvi" />
+        <meta property="og:title" content="Ashutosh Jainvi | Portfolio | Projects" />
+        <meta property="og:type" content="website" />
+        <meta property="og:url" content="http://projects.ashutoshjainvi.com" />
+        <meta property="og:image" content="http://www.ashutoshjainvi/fav.png" />
+        <meta property="og:site_name" content="Ashutosh Jainvi | Porjects" />
+        <link rel="shortcut icon" type="image/x-icon" href="assets/img/fav.png" />
+		<script type="application/x-javascript">function hideURLbar(){
+  			if (window.scrollY == 0) window.scrollTo(0,1);}
+		</script>
+		<link rel="stylesheet" type="text/css" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+		<link rel="stylesheet" type="text/css" href="assets/css/style.css">
+		<link rel="stylesheet" type="text/css" href="assets/css/angular-ui-switch.min.css">
+		<link href="https://fonts.googleapis.com/css?family=Raleway:400,600,700" rel="stylesheet">
+		<script type="application/x-javascript"> addEventListener("load", function() { setTimeout(hideURLbar, 0); }, false); function hideURLbar(){ window.scrollTo(0,1); } </script>
+		 <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous"> 
+    </head>
+	<body ng-app="theProjectsApp">
+		<div class="main-wrapper">
+			<header></header>
+			<main-section></main-section>			
+		</div>
+	</body>
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js" integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4=" crossorigin="anonymous">
+	</script>
+	<script type="text/javascript" src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+	<!-- load angular via CDN -->
+    <script src="//code.angularjs.org/1.6.6/angular.min.js"></script>
+    <!-- <script src="http://angular-ui.github.com/bootstrap/ui-bootstrap-tpls-0.2.0.js"></script> -->
+    <script src="//code.angularjs.org/1.6.6/angular-animate.min.js"></script>
+    <!-- <script src="//code.angularjs.org/1.6.6/angular-route.min.js"></script> -->
+    <!-- <script src="//code.angularjs.org/1.6.6/angular-resource.min.js"></script> -->
+    <script src="app/app.module.js"></script>
+    <!-- <script src="app/app.route.js"></script> -->
+    <script src="app/app.service.js"></script>
+    <script src="app/shared/header/header.directive.js"></script>
+    <script src="app/components/main-section.directive.js"></script>
+    <script src="app/components/main-section.controller.js"></script>
+    <script src="app/shared/card/card.directive.js"></script>
+    <script src="app/shared/card/card.controller.js"></script>
+    <script src="app/shared/modal/modal.directive.js"></script>
+    <script src="app/shared/switch/angular-ui-switch.min.js"></script>
+
+   
+    <!-- fixed header/nav-bar on scrolling -->
+	<script type="text/javascript">
+		$(document).ready(function () {
+		    $(window).scroll(function () {
+		        $('.navigation').each(function () {
+		            var imagePos = $(this).offset().top;
+		            // alert(imagePos);
+		            var topOfWindow = $(window).scrollTop();
+		            //alert(topOfWindow);
+		            $(this).removeClass("fixed-nav");
+		            if (topOfWindow > 245) {
+		                $(this).addClass("fixed-nav");
+		            }
+		        });
+		    });
+		});
+	</script>
+        <!-- smooth scroll -->
+    <script type="text/javascript">
+        $(document).ready(function() {
+									$(document).on('click', '.scroll',function(){		
+										event.preventDefault();
+										$('html,body').animate({scrollTop:$(this.hash).offset().top},1200);
+									});
+								});
+    </script>
+</html>

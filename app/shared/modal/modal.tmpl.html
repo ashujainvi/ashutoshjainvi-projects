@@ -1,0 +1,52 @@
+<!-- details Modal -->
+<div class="modal fade" id="modal{{project.id}}" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+  <div class="modal-dialog details-dialog" role="document">
+    <div class="modal-content">
+        <button type="button" class="close dialog-button-close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      <div class="modal-body">
+        <div class="col-md-7 details-dialog-img" ng-style="{'background-image': 'url(assets/img/thumbs/{{project.img}})'}"></div>
+        <div class="col-md-5 details-dialog-description">
+            <h3>{{project.title}}</h3>
+          <p>{{project.date}}</p>
+          <hr>
+          <p>{{project.description}}</p>
+          <hr>
+            <p><i class="fa fa-first-order font-icon" aria-hidden="true" ></i> Genre: {{project.genre}}</p>
+            <p><i class="fa fa-outdent font-icon" aria-hidden="true" ></i> Tech used: {{project.tech}}</p>
+          <hr>
+<!--
+            <p><i class="fa fa-newspaper-o font-icon" aria-hidden="true"></i> Website Link</p>
+            <p><i class="fa fa-github font-icon" aria-hidden="true"></i> Github Link</p>
+
+            <hr>
+-->       <a href="{{project.website_url}}" ng-if="project.website_url">
+            <div class="col-md-3 col-xs-3 link-button">
+                <div class="col-md-12 link-symbol"><i class="fa fa-list-alt" aria-hidden="true"></i></div>
+                <p class="col-md-12 text-center">Website</p>
+            </div>
+          </a>
+          <a href="{{project.mobile_url}}" ng-if="project.mobile_url">
+              <div class="col-md-3 col-xs-3 link-button">
+                    <div class="col-md-12 link-symbol"><i class="fa fa-mobile" aria-hidden="true"></i></div>
+                    <p class="col-md-12 text-center">Mobile</p>
+              </div> 
+          </a>          
+          <a href="{{project.github_url}}" ng-if="project.github_url">
+              <div class="col-md-3 col-xs-3 link-button">
+                    <div class="col-md-12 link-symbol"><i class="fa fa-github" aria-hidden="true"></i></div>
+                    <p class="col-md-12 text-center">Github</p>
+              </div> 
+          </a>
+        <a href="{{project.pinterest_url}}" ng-if="project.pinterest_url">
+              <div class="col-md-3 col-xs-3 link-button">
+                    <div class="col-md-12 link-symbol"><i class="fa fa-pinterest" aria-hidden="true"></i></div>
+                    <p class="col-md-12 text-center">Pinterest</p>
+              </div> 
+          </a>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

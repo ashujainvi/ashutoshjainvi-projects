@@ -1,0 +1,77 @@
+<section id="main-section">
+    <section id="tech-logo">
+        <div class="container">
+            <div class="heading-container">
+                <h2 class="h2-active">featured tech</h2>
+            </div>
+            <div class="project-cards">
+				<div class="col-md-10 col-sm-12 col-xs-12">
+					<div class="project-card tech-card card text-center">
+                        <img src="assets/img/{{techno.img}}" class="project-card-img tech-card-img">
+	               </div>
+				</div>
+			</div>
+			<div class="clearfix"></div>
+        </div>
+    </section>
+	<section id="latest-cards">
+		<div class="container">
+			<div class="heading-container">
+				<h2 ng-class="{'h2-active' : latestEnabled}">{{latest.type}}</h2>
+				<span ng-click="showLatest = !showLatest" class="toggle-switch"><switch id="enabled" name="enabled" ng-model="latestEnabled"></switch></span>
+			</div>
+			<div class="project-cards" ng-show="!showLatest">
+				<div class="col-md-10 col-sm-12 col-xs-12" ng-repeat="latest in latest.content">
+					<card project="latest"></card>
+					<modal project="latest"></modal>
+				</div>
+			</div>
+			<div class="clearfix"></div>
+		</div>
+	</section>
+	<section id="web-cards">
+		<div class="container">
+			<div class="heading-container">
+				<h2 ng-class="{'h2-active' : webEnabled}">{{webs.type}}</h2>
+				<span ng-click="showWeb = !showWeb" class="toggle-switch"><switch  name="enabled2" ng-model="webEnabled"></switch></span>
+			</div>
+			<div class="project-cards" ng-show="!showWeb">
+				<div class="col-md-5 col-sm-6 col-xs-12" ng-repeat="web in webs.content">
+					<card project="web"></card>
+					<modal project="web"></modal>
+				</div>
+			</div>
+			<div class="clearfix"></div>
+		</div>
+	</section>
+	<section id="data-cards">
+		<div class="container">
+			<div class="heading-container">
+				<h2 ng-class="{'h2-active' : dataEnabled}">{{data.type}}</h2>
+				<span ng-click="showData = !showData" class="toggle-switch"><switch  name="enabled2" ng-model="dataEnabled"></switch></span>
+			</div>
+			<div class="project-cards" ng-show="!showData">
+				<div class="col-md-5 col-sm-6 col-xs-12" ng-repeat="data in data.content">
+					<card project="data"></card>
+					<modal project="data"></modal>
+				</div>
+			</div>
+			<div class="clearfix"></div>
+		</div>
+	</section>
+	<section id="graphic-cards">
+		<div class="container">
+			<div class="heading-container">
+				<h2 ng-class="{'h2-active' : graphicsEnabled}">{{graphics.type}}</h2>
+				<span ng-click="showGraphics = !showGraphics" class="toggle-switch"><switch id="enabled" name="enabled" ng-model="graphicsEnabled"></switch></span>
+			</div>
+			<div class="project-cards" ng-show="!showGraphics">
+				<div class="col-md-5 col-sm-6 col-xs-12" ng-repeat="graphics in graphics.content">
+					<card project="graphics"></card>
+					<modal project="graphics"></modal>
+				</div>
+			</div>
+			<div class="clearfix"></div>
+		</div>
+	</section>
+</section>
